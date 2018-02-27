@@ -18,7 +18,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         window = UIWindow(frame: UIScreen.main.bounds)
         
-        window?.backgroundColor = .cyan
+        //window?.backgroundColor = .cyan
         window?.makeKeyAndVisible()
         
         //Crear unos modelo
@@ -33,9 +33,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let starkHouseViewController = HouseDetailViewController(model: starkHouse)
         let lannisterHouseViewController = HouseDetailViewController(model: lannisterHouse)
         
-        // Creamos el combinador
+        
+        // Creamos los combinadoreres
         let tabBarViewController = UITabBarController()
-        tabBarViewController.viewControllers = [starkHouseViewController, lannisterHouseViewController]
+        tabBarViewController.viewControllers = [
+          starkHouseViewController.wrappedInNavigation(),
+          lannisterHouseViewController.wrappedInNavigation()
+         ]
         
         //Lo asignamos al rootViewControler
         window?.rootViewController = tabBarViewController
