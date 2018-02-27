@@ -10,6 +10,9 @@ import UIKit
 
 class HouseDetailViewController: UIViewController {
 
+    @IBOutlet weak var houseNameLabel: UILabel!
+    @IBOutlet weak var sigilImageView: UIImageView!
+    @IBOutlet weak var wordsLabel: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
 
