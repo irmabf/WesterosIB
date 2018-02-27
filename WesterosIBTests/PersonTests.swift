@@ -47,7 +47,16 @@ class PersonTests: XCTestCase {
     }
     
     //Comprabar que dos personas son iguales o son diferentes
-    
+    func testPersonEquality() {
+        //Identidad
+        XCTAssertEqual(tyrion, tyrion)
+        // Igualdad
+        let enano = Person(name: "Tyrion", alias: "El enano", house: lannisterHouse)
+        XCTAssertEqual(enano, tyrion)
+        
+        //Desigualdad
+        XCTAssertNotEqual(tyrion, arya)
+    }
 }
 
 

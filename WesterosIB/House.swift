@@ -41,7 +41,20 @@ extension House{
         _members.insert(person)
     }
 }
+// Mark: - Proxy
+extension House {
+    var proxyForEquality: String {
+         return "\(name) \(words) \(count) "
+    }
+}
 
+extension House: Equatable {
+    static func ==(lhs: House, rhs: House) -> Bool {
+        return lhs.proxyForEquality == rhs.proxyForEquality
+    }
+    
+    
+}
 final class Sigil {
     let image: UIImage
     let description: String
