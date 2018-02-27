@@ -35,7 +35,7 @@ extension House{
         return _members.count
     }
     func add(person: Person) {
-        guard person.house.name == self.name else {
+        guard person.house == self else {
             return
         }
         _members.insert(person)
@@ -48,13 +48,36 @@ extension House {
     }
 }
 
+// Mark: - ProxyForEquality
+extension House {
+    var proxyForComparison: String {
+        //importante, me da igual que el nombre me lo pasen en may, min etc
+        return name.uppercased()
+    }
+}
+
 extension House: Equatable {
     static func ==(lhs: House, rhs: House) -> Bool {
         return lhs.proxyForEquality == rhs.proxyForEquality
     }
-    
-    
+
 }
+
+// Mark: - Hashable
+
+extension House: Hashable{
+    var hashValue: Int {
+        return proxyForEquality.hashValue
+    }
+}
+
+// Mark: - Comparable
+extension House: Comparable{
+    static func <(lhs: House, rhs: House) -> Bool {
+        return lhs.proxyForComparison < rhs.proxyForComparison
+    }
+}
+
 final class Sigil {
     let image: UIImage
     let description: String

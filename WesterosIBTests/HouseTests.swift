@@ -83,6 +83,17 @@ class HouseTests: XCTestCase {
         //Desigualdad
         XCTAssertNotEqual(starkHouse, lannisterHouse)
     }
+    
+    //Comprobar que nuestra tambien tiene un valor de hash, es decir
+    //Que el valor del hash de la casa sea not nil
+    func testHashable() {
+        XCTAssertNotNil(starkHouse.hashValue)
+    }
+    //En la app tendre que ordenar las casas y para poder ordenar un objeto o tipo necesito
+    //el protocolo comparable, determinar que un objeto es mas grande que el otro
+    func testHouseComparison() {
+        XCTAssertLessThan(lannisterHouse,starkHouse )
+    }
 
 }
 
