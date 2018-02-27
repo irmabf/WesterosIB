@@ -29,6 +29,7 @@ class HouseDetailViewController: UIViewController {
     init(model: House) {
         self.model = model
         super.init(nibName: nil, bundle: Bundle(for: type(of: self)))
+        title = model.name
     }
     //Arreglo para manejar los posibles nil, obligacion de apple
     required init?(coder aDecoder: NSCoder) {
@@ -43,6 +44,7 @@ class HouseDetailViewController: UIViewController {
         
     }*/
     // Mark: - Life Cycle
+    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         syncModelWithView()
@@ -54,7 +56,7 @@ class HouseDetailViewController: UIViewController {
         houseNameLabel.text = "House \(model.name)"
         sigilImageView.image = model.sigil.image
         wordsLabel.text = model.words
-        title = model.name
+       
         
     }
 }
