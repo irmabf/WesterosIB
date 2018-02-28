@@ -103,6 +103,12 @@ class HouseTests: XCTestCase {
         XCTAssertLessThan(lannisterHouse,starkHouse )
     }
     
+    func testHouseReturnsSortedArrayOfMembers() {
+        starkHouse.add(persons: robb, arya)
+        
+        XCTAssertEqual(starkHouse.sortedMembers, [arya, robb])
+    }
+    
 }
 
 

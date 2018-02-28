@@ -77,7 +77,10 @@ class HouseDetailViewController: UIViewController {
     }
     
     @objc func displayMembers(){
-        //TODO: implement!!!!
+        //Creamos el view controller
+        let memberListViewController = MemberListViewController(model: model.sortedMembers)
+        //Hacemos push
+        navigationController?.pushViewController(memberListViewController, animated: true)
     }
 }
 
