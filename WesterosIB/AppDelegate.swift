@@ -37,14 +37,21 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         }*/
         
         // Creamos los combinadoreres
-        let tabBarViewController = UITabBarController()
+       /* let tabBarViewController = UITabBarController()
         tabBarViewController.viewControllers =
             houses
                 .map{HouseDetailViewController(model: $0)}
                 .map{ $0.wrappedInNavigation()}
+        */
+        
+        //Creamos la tabla
+        let houseListViewController = HouseListViewController(model: houses)
+        
+        
         
         //Lo asignamos al rootViewControler
-        window?.rootViewController = tabBarViewController
+        window?.rootViewController = houseListViewController.wrappedInNavigation()
+        
         return true
     }
 
