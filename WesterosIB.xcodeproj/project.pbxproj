@@ -26,6 +26,8 @@
 		B79046FD20447CE800224E0A /* House.swift in Sources */ = {isa = PBXBuildFile; fileRef = B79046FC20447CE800224E0A /* House.swift */; };
 		B79046FF2044826600224E0A /* PersonTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B79046FE2044826600224E0A /* PersonTests.swift */; };
 		B7904701204482E800224E0A /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7904700204482E800224E0A /* Person.swift */; };
+		B7DB57A12047620E006CC046 /* MemberListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7DB579F2047620E006CC046 /* MemberListViewController.swift */; };
+		B7DB57A22047620E006CC046 /* MemberListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B7DB57A02047620E006CC046 /* MemberListViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,6 +64,8 @@
 		B79046FC20447CE800224E0A /* House.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = House.swift; sourceTree = "<group>"; };
 		B79046FE2044826600224E0A /* PersonTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonTests.swift; sourceTree = "<group>"; };
 		B7904700204482E800224E0A /* Person.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
+		B7DB579F2047620E006CC046 /* MemberListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemberListViewController.swift; sourceTree = "<group>"; };
+		B7DB57A02047620E006CC046 /* MemberListViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MemberListViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,6 +115,8 @@
 				B73A8C12204738ED00ED89A3 /* WikiViewController.xib */,
 				B72A770920474CAF0034813D /* HouseListViewController.swift */,
 				B72A770A20474CAF0034813D /* HouseListViewController.xib */,
+				B7DB579F2047620E006CC046 /* MemberListViewController.swift */,
+				B7DB57A02047620E006CC046 /* MemberListViewController.xib */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -255,6 +261,7 @@
 				B73A8C14204738ED00ED89A3 /* WikiViewController.xib in Resources */,
 				B71CEBFD2045C1BA00F6D08E /* targaryenSmall.jpg in Resources */,
 				B72A770C20474CAF0034813D /* HouseListViewController.xib in Resources */,
+				B7DB57A22047620E006CC046 /* MemberListViewController.xib in Resources */,
 				B71CEC052045C26200F6D08E /* HouseDetailViewController.xib in Resources */,
 				B71CEBFF2045C1BA00F6D08E /* lannister.jpg in Resources */,
 				B767EC352044798700CD07B4 /* Assets.xcassets in Resources */,
@@ -284,6 +291,7 @@
 				B72A26EB20461D74000866F9 /* Repository.swift in Sources */,
 				B73A8C13204738ED00ED89A3 /* WikiViewController.swift in Sources */,
 				B72A770B20474CAF0034813D /* HouseListViewController.swift in Sources */,
+				B7DB57A12047620E006CC046 /* MemberListViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
