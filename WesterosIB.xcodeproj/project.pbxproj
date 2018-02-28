@@ -15,6 +15,8 @@
 		B72A26E720461906000866F9 /* UIViewController+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B72A26E620461906000866F9 /* UIViewController+Additions.swift */; };
 		B72A26E920461CB6000866F9 /* RespositoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B72A26E820461CB6000866F9 /* RespositoryTests.swift */; };
 		B72A26EB20461D74000866F9 /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = B72A26EA20461D74000866F9 /* Repository.swift */; };
+		B73A8C13204738ED00ED89A3 /* WikiViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B73A8C11204738ED00ED89A3 /* WikiViewController.swift */; };
+		B73A8C14204738ED00ED89A3 /* WikiViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B73A8C12204738ED00ED89A3 /* WikiViewController.xib */; };
 		B767EC2E2044798700CD07B4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B767EC2D2044798700CD07B4 /* AppDelegate.swift */; };
 		B767EC352044798700CD07B4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B767EC342044798700CD07B4 /* Assets.xcassets */; };
 		B767EC382044798700CD07B4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B767EC362044798700CD07B4 /* LaunchScreen.storyboard */; };
@@ -43,6 +45,8 @@
 		B72A26E620461906000866F9 /* UIViewController+Additions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Additions.swift"; sourceTree = "<group>"; };
 		B72A26E820461CB6000866F9 /* RespositoryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RespositoryTests.swift; sourceTree = "<group>"; };
 		B72A26EA20461D74000866F9 /* Repository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repository.swift; sourceTree = "<group>"; };
+		B73A8C11204738ED00ED89A3 /* WikiViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WikiViewController.swift; sourceTree = "<group>"; };
+		B73A8C12204738ED00ED89A3 /* WikiViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WikiViewController.xib; sourceTree = "<group>"; };
 		B767EC2A2044798700CD07B4 /* WesterosIB.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WesterosIB.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B767EC2D2044798700CD07B4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B767EC342044798700CD07B4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -99,6 +103,8 @@
 			children = (
 				B71CEC022045C26200F6D08E /* HouseDetailViewController.swift */,
 				B71CEC032045C26200F6D08E /* HouseDetailViewController.xib */,
+				B73A8C11204738ED00ED89A3 /* WikiViewController.swift */,
+				B73A8C12204738ED00ED89A3 /* WikiViewController.xib */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -132,6 +138,7 @@
 		B767EC2C2044798700CD07B4 /* WesterosIB */ = {
 			isa = PBXGroup;
 			children = (
+				B71CEC062045C28400F6D08E /* Controllers */,
 				B72A26E520461847000866F9 /* UIKitExtensions */,
 				B71CEC012045C1ED00F6D08E /* Domain */,
 				B71CEC002045C1C400F6D08E /* Assets */,
@@ -139,7 +146,6 @@
 				B767EC342044798700CD07B4 /* Assets.xcassets */,
 				B767EC362044798700CD07B4 /* LaunchScreen.storyboard */,
 				B767EC392044798700CD07B4 /* Info.plist */,
-				B71CEC062045C28400F6D08E /* Controllers */,
 			);
 			path = WesterosIB;
 			sourceTree = "<group>";
@@ -240,6 +246,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B767EC382044798700CD07B4 /* LaunchScreen.storyboard in Resources */,
+				B73A8C14204738ED00ED89A3 /* WikiViewController.xib in Resources */,
 				B71CEBFD2045C1BA00F6D08E /* targaryenSmall.jpg in Resources */,
 				B71CEC052045C26200F6D08E /* HouseDetailViewController.xib in Resources */,
 				B71CEBFF2045C1BA00F6D08E /* lannister.jpg in Resources */,
@@ -268,6 +275,7 @@
 				B72A26E720461906000866F9 /* UIViewController+Additions.swift in Sources */,
 				B767EC2E2044798700CD07B4 /* AppDelegate.swift in Sources */,
 				B72A26EB20461D74000866F9 /* Repository.swift in Sources */,
+				B73A8C13204738ED00ED89A3 /* WikiViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
