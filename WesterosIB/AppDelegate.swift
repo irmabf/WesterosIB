@@ -21,6 +21,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         //window?.backgroundColor = .cyan
         window?.makeKeyAndVisible()
         
+        var houses = Repository.local.houses
+        
         //Crear unos modelo
         
         let starkSigil = Sigil(image: UIImage(named: "codeIsComing.png")!, description: "Lobo Huargo")

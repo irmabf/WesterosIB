@@ -13,6 +13,8 @@
 		B71CEC042045C26200F6D08E /* HouseDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B71CEC022045C26200F6D08E /* HouseDetailViewController.swift */; };
 		B71CEC052045C26200F6D08E /* HouseDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B71CEC032045C26200F6D08E /* HouseDetailViewController.xib */; };
 		B72A26E720461906000866F9 /* UIViewController+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B72A26E620461906000866F9 /* UIViewController+Additions.swift */; };
+		B72A26E920461CB6000866F9 /* RespositoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B72A26E820461CB6000866F9 /* RespositoryTests.swift */; };
+		B72A26EB20461D74000866F9 /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = B72A26EA20461D74000866F9 /* Repository.swift */; };
 		B767EC2E2044798700CD07B4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B767EC2D2044798700CD07B4 /* AppDelegate.swift */; };
 		B767EC352044798700CD07B4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B767EC342044798700CD07B4 /* Assets.xcassets */; };
 		B767EC382044798700CD07B4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B767EC362044798700CD07B4 /* LaunchScreen.storyboard */; };
@@ -39,6 +41,8 @@
 		B71CEC022045C26200F6D08E /* HouseDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HouseDetailViewController.swift; sourceTree = "<group>"; };
 		B71CEC032045C26200F6D08E /* HouseDetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HouseDetailViewController.xib; sourceTree = "<group>"; };
 		B72A26E620461906000866F9 /* UIViewController+Additions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Additions.swift"; sourceTree = "<group>"; };
+		B72A26E820461CB6000866F9 /* RespositoryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RespositoryTests.swift; sourceTree = "<group>"; };
+		B72A26EA20461D74000866F9 /* Repository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repository.swift; sourceTree = "<group>"; };
 		B767EC2A2044798700CD07B4 /* WesterosIB.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WesterosIB.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B767EC2D2044798700CD07B4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B767EC342044798700CD07B4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -85,6 +89,7 @@
 			children = (
 				B79046FC20447CE800224E0A /* House.swift */,
 				B7904700204482E800224E0A /* Person.swift */,
+				B72A26EA20461D74000866F9 /* Repository.swift */,
 			);
 			path = Domain;
 			sourceTree = "<group>";
@@ -145,6 +150,7 @@
 				B767EC442044798700CD07B4 /* Info.plist */,
 				B79046FA20447BFD00224E0A /* HouseTests.swift */,
 				B79046FE2044826600224E0A /* PersonTests.swift */,
+				B72A26E820461CB6000866F9 /* RespositoryTests.swift */,
 			);
 			path = WesterosIBTests;
 			sourceTree = "<group>";
@@ -261,6 +267,7 @@
 				B79046FD20447CE800224E0A /* House.swift in Sources */,
 				B72A26E720461906000866F9 /* UIViewController+Additions.swift in Sources */,
 				B767EC2E2044798700CD07B4 /* AppDelegate.swift in Sources */,
+				B72A26EB20461D74000866F9 /* Repository.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -269,6 +276,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B79046FB20447BFD00224E0A /* HouseTests.swift in Sources */,
+				B72A26E920461CB6000866F9 /* RespositoryTests.swift in Sources */,
 				B79046FF2044826600224E0A /* PersonTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
