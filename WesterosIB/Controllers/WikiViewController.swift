@@ -31,21 +31,38 @@ class WikiViewController: UIViewController {
     
     // Mark: - Life Cycle
     override func viewDidLoad() {
-        super.viewDidLoad()
+      super.viewDidLoad()
         loadingView.isHidden = false
         loadingView.startAnimating()
         webView.navigationDelegate = self
         syncModelWithView()
+        
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        //Nos damos de alta
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        //Nos damos de baja
+    }
+  
+        
     
     // Mark: - Sync
     func syncModelWithView() {
         title = model.name
         webView.load(URLRequest(url: model.wikiURL))
     }
+        
+    // Mark: - Notifications
+      
 }
 
 extension WikiViewController: WKNavigationDelegate{
+    
     func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
         loadingView.stopAnimating()
         loadingView.isHidden = true

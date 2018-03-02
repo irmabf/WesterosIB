@@ -22,7 +22,7 @@ class HouseDetailViewController: UIViewController {
     //En primer lugar, un HouseDetailViewController, necesita mostar una House, que va a ser un modelo
     
     // Mark: - Propierties
-    let model: House
+    var model: House
    
     // Mark: - Inicialization
     //necesito inicializar el modelo House
@@ -84,6 +84,15 @@ class HouseDetailViewController: UIViewController {
     }
 }
 
+extension HouseDetailViewController: HouseListViewControllerDelegate {
+    func houseListViewController(_ vc: HouseListViewController, didSelectHouse house: House) {
+        //Self model ahora es igual a la house nueva que se ha seleccionado
+        self.model = house
+        syncModelWithView()
+    }
+    
+    
+}
 
 
 

@@ -18,39 +18,24 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         window = UIWindow(frame: UIScreen.main.bounds)
         
-        //window?.backgroundColor = .cyan
         window?.makeKeyAndVisible()
         
         
-        
-        //Crear unos modelo
-        
-         //Crear los controladores y pasarle los modelos
+        //Creamos el modelo
         let houses = Repository.local.houses
-        //var controllers = [UIViewController]()
-        /*for house in houses {
-            controllers.append(HouseDetailViewController(model: house).wrappedInNavigation())
-        }*/
- 
-        /*let controllers = houses.map{ (house: House) in
-            return HouseDetailViewController(model: house)
-        }*/
-        
-        // Creamos los combinadoreres
-       /* let tabBarViewController = UITabBarController()
-        tabBarViewController.viewControllers =
-            houses
-                .map{HouseDetailViewController(model: $0)}
-                .map{ $0.wrappedInNavigation()}
-        */
-        
-        //Creamos la tabla
+
+        //Creamos los controladores (masterVC, detailVC)
         let houseListViewController = HouseListViewController(model: houses)
+        let houseDetailViewController = HouseDetailViewController(model: houses.first!)
         
+        //Asignamos delegados
+        houseListViewController.delegate = houseDetailViewController
+        //Crear el UISplitVC y le asignamos los viewcontrollers master y detail
+        let splitViewController = UISplitViewController()
+        splitViewController.viewControllers = [houseListViewController.wrappedInNavigation(), houseDetailViewController.wrappedInNavigation()]
         
-        
-        //Lo asignamos al rootViewControler
-        window?.rootViewController = houseListViewController.wrappedInNavigation()
+        //Asignamos el rootVC
+        window?.rootViewController = splitViewController
         
         return true
     }
