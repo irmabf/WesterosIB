@@ -29,6 +29,19 @@ extension Season{
     func add(episode: Episode){
         _episodes.insert(episode)
     }
+    func DateToString(date: Date) -> String{
+        let formatter = DateFormatter()
+        formatter.dateFormat = "dd-MM-yyyy"
+        return formatter.string(from: date)
+        
+    }
+    var sortedEpisode: [Episode]{
+        return _episodes.sorted()
+    }
+    
+    var count: Int{
+        return _episodes.count
+    }
 }
 
 // Mark: - CustomStringConvertible
@@ -52,6 +65,13 @@ extension Season: Comparable{
     }
 }
 
+// Mark: - Hashable
+
+extension Season: Hashable{
+    var hashValue: Int {
+        return proxyForEquality.hashValue
+    }
+}
 
 // Mark: - ProxyForEquality
 extension Season {

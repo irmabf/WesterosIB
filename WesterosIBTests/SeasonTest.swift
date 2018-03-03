@@ -30,12 +30,13 @@ class SeasonTest: XCTestCase {
     
     func testSeasonHasAtLeastOneEpisode(){
       
-        XCTAssertNotNil(episodeOne)
+        XCTAssertGreaterThan(seasonOne.count, 0)
     }
     
     func testSeasonEquality(){
         XCTAssertEqual(seasonOne, seasonOne)
         XCTAssertNotEqual(seasonOne, seasonTwo)
+       
     }
     
   
