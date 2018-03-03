@@ -26,6 +26,7 @@ protocol  HouseFactory {
     func houses(filteredBy: Filter) -> [House]
 }
 
+
 final class LocalFactory: HouseFactory {
   
     var houses: [House] {

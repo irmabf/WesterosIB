@@ -37,8 +37,8 @@ class HouseListViewController: UITableViewController {
     
     // Mark: - Life Cycle
     
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
+    override func viewDidLoad() {
+        super.viewDidLoad()
         let lastRow = UserDefaults.standard.integer(forKey: LAST_HOUSE)
         let indexPath = IndexPath(row: lastRow, section: 0)
         tableView.selectRow(at: indexPath, animated: true, scrollPosition: .top)
