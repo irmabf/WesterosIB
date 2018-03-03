@@ -10,6 +10,7 @@ import UIKit
 
 let HOUSE_KEY = "HouseKey"
 let HOUSE_DID_CHANGE_NOTIFICATION_NAME = "HouseDidChange"
+let LAST_HOUSE = "LAST_HOUSE"
 
 
 protocol HouseListViewControllerDelegate {
@@ -34,6 +35,15 @@ class HouseListViewController: UITableViewController {
         fatalError("init(coder:) has not been implemented")
     }
     
+    // Mark: - Life Cycle
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        let lastRow = UserDefaults.standard.integer(forKey: LAST_HOUSE)
+        let indexPath = IndexPath(row: lastRow, section: 0)
+        tableView.selectRow(at: indexPath, animated: true, scrollPosition: .top)
+    
+    }
 
     // MARK: - Table view data source
 
@@ -88,7 +98,18 @@ class HouseListViewController: UITableViewController {
 
 extension HouseListViewController {
     func saveLastSelectedHouse(at row: Int) {
+        let defaults = UserDefaults.standard
+        defaults.set(row, forKey: LAST_HOUSE)
+        defaults.synchronize()
+    }
+    func lastSelectedHouse() -> House{
+        //Extraer la row del User Defaults
+        let row = UserDefaults.standard.integer(forKey: LAST_HOUSE)
         
+        //Averiguar la casa de ese row
+        let house = model[row]
+        //Devolverla
+        return house
     }
 }
 
