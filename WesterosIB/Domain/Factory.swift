@@ -93,13 +93,13 @@ final class LocalFactory: DataFactory{
         // Season creation
         let inputFormatter = DateFormatter()
         inputFormatter.dateFormat = "dd-MM-yyyy"
-        let firstSeason =  Season(seasonName: "Game of Thrones (season 1)", airDate: inputFormatter.date(from: "01-01-2012")!)
-        let secondSeason =  Season(seasonName: "Game of Thrones (season 2)", airDate: inputFormatter.date(from: "01-01-2012")!)
-        let thirdSeason =  Season(seasonName: "Game of Thrones (season 3)", airDate: inputFormatter.date(from: "01-01-2013")!)
-        let fourthSeason =  Season(seasonName: "Game of Thrones (season 4)", airDate: inputFormatter.date(from: "01-01-2014")!)
-        let fifthSeason =  Season(seasonName: "Game of Thrones (season 5)", airDate: inputFormatter.date(from: "01-01-2015")!)
-        let sixthSeason =  Season(seasonName: "Game of Thrones (season 6)", airDate: inputFormatter.date(from: "01-01-2016")!)
-        let seventhSeason =  Season(seasonName: "Game of Thrones (season 7)", airDate: inputFormatter.date(from: "01-01-2017")!)
+        let firstSeason =  Season(seasonName: "Game of Thrones (season 1)", airDate: inputFormatter.date(from: "17-04-2011")!)
+        let secondSeason =  Season(seasonName: "Game of Thrones (season 2)", airDate: inputFormatter.date(from: "01-04-2012")!)
+        let thirdSeason =  Season(seasonName: "Game of Thrones (season 3)", airDate: inputFormatter.date(from: "31-03-2013")!)
+        let fourthSeason =  Season(seasonName: "Game of Thrones (season 4)", airDate: inputFormatter.date(from: "06-04-2014")!)
+        let fifthSeason =  Season(seasonName: "Game of Thrones (season 5)", airDate: inputFormatter.date(from: "12-04-2015")!)
+        let sixthSeason =  Season(seasonName: "Game of Thrones (season 6)", airDate: inputFormatter.date(from: "24-04-2016")!)
+        let seventhSeason =  Season(seasonName: "Game of Thrones (season 7)", airDate: inputFormatter.date(from: "16-07-2017")!)
         
         // Episode creation
         let episode1x01 = Episode(title: "Winter is Comming", releaseDate:  inputFormatter.date(from: "17-04-2011")!, season: firstSeason)

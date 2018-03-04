@@ -30,43 +30,39 @@ class RepositoryTest: XCTestCase {
         XCTAssertNotNil(data)
     }
     
-    func testRepositoryHousesCreation() {
+    func testRepositoryCreateHouses() {
         XCTAssertNotNil(houses)
         XCTAssertEqual(houses.count, 3)
     }
     
-    func testResitoryReturnSortedArrayOfHouses() {
+    func testResitoryReturnArrayOfHouses() {
         XCTAssertEqual(houses, houses.sorted())
     }
     
-    func testRepositoryReturnsHouseByCaseIntensensitively() {
-        let stark = Repository.local.house(name: "StArk")
+    func testRepositoryReturnsHouseByCase() {
+        let stark = Repository.local.house(name: "STArk")
         XCTAssertEqual(stark?.name, "Stark")
         let other = Repository.local.house(name: "Other")
         XCTAssertNil(other?.name)
     }
     
-    func testRepositoryFilteringHouseBy() {
-        let filtered = Repository.local.houseFilter(filterBy: {$0.words.contains("invierno")})
+    func testRepositoryFilterHouseBy() {
+        let filtered = Repository.local.houseFilter(filterBy: {$0.words.contains("acerca")})
         XCTAssertEqual(filtered.count, 1)
     }
     
-    func testRepositorySeasonCreation() {
+    func testRepositoryCreateSeason() {
         XCTAssertEqual(seasons.count, 7)
     }
     
-    func testResitoryReturnSortedArrayOfSeasons() {
+    func testResitoryReturnArrayOfSeasons() {
         XCTAssertEqual(seasons, seasons.sorted())
     }
     
-    func testRepositoryFilteringSeasonBy() {
-        let filtered = Repository.local.seasonFilter(filterBy: {$0.nameOfSeason.contains("1")})
-        XCTAssertEqual(filtered.count, 1)
-    }
     
-    func testRepositoryReturnHouseByCaseTypeSafe() {
-        let stark = Repository.local.house(named: .Stark)
-        XCTAssertEqual(stark?.name, "Stark")
+    func testRepositoryReturnHouseByCase() {
+        let stark = Repository.local.house(named: .Lannister)
+        XCTAssertEqual(stark?.name, "Lannister")
     }
 }
 
