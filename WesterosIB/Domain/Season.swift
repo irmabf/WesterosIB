@@ -9,45 +9,57 @@
 import UIKit
 
 
+
 typealias Episodes = Set<Episode>
 
 final class Season {
-    let name: String
-    let releaseDate: Date
+    let nameOfSeason: String
+    var releaseDate: Date
     private var _episodes: Episodes
+    private var _numEpisodes: Int
     
-    init(name: String, releaseDate: Date, episode: Episode) {
-        self.name = name
-        self.releaseDate = releaseDate
+    init(seasonName: String, airDate: Date) {
+        self.nameOfSeason = seasonName
+        self.releaseDate = airDate
+        
         _episodes = Episodes()
-        self.add(episode: episode)
+        _numEpisodes = _episodes.count
     }
-    
 }
 
-extension Season{
-    func add(episode: Episode){
+
+// MARK: - Count Episodes
+extension Season {
+    var count: Int {
+        return _numEpisodes
+    }
+}
+
+extension Season {
+    var episodes: [Episode] {
+        let arrayEpisodes = Array(_episodes)
+        return arrayEpisodes
+    }
+}
+
+// MARK: - Add
+extension Season {
+    func add(episode: Episode) {
         _episodes.insert(episode)
-    }
-    func DateToString(date: Date) -> String{
-        let formatter = DateFormatter()
-        formatter.dateFormat = "dd-MM-yyyy"
-        return formatter.string(from: date)
-        
-    }
-    var sortedEpisode: [Episode]{
-        return _episodes.sorted()
+        _numEpisodes = _episodes.count
     }
     
-    var count: Int{
-        return _episodes.count
+    func add(episodes: Episode...) {
+        for episode in episodes {
+            add(episode: episode)
+        }
     }
 }
 
 // Mark: - CustomStringConvertible
 extension Season: CustomStringConvertible {
     var description: String {
-        return "\(name) \(releaseDate) \(_episodes)"
+        return "\(nameOfSeason) \(releaseDate) \(_episodes)"
     }
 }
 
@@ -76,7 +88,7 @@ extension Season: Hashable{
 // Mark: - ProxyForEquality
 extension Season {
     var proxyForEquality: String {
-        return "\(name) \(releaseDate) "
+        return "\(nameOfSeason) \(releaseDate) "
     }
 }
 
